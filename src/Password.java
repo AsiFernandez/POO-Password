@@ -39,20 +39,20 @@ public class Password {
 		int mayusculas = 0; 
 		int numeros = 0;
 		
-		for(int i= 0; i <= longitud; i++) {
+		for(int i= 0; i <= contraseña.length(); i++) {
 			if(Character.isUpperCase(i)) {
-				mayusculas ++;
+				mayusculas = mayusculas +1;
 			}else if (Character.isLowerCase(i)) {
-				minusculas ++;
+				minusculas = minusculas +1;
 			}else {
 				numeros ++;
 			}
 		} 
 		
-		if (mayusculas > 2 && minusculas > 1 && numeros >5 ) {
-			fuerte = true;
-		}else {
+		if ( mayusculas > 2 && minusculas > 1 && numeros >5 ) {
 			fuerte = false;
+		}else {
+			fuerte = true;
 		}
 		 
 		 return fuerte;

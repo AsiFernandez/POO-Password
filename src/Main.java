@@ -9,12 +9,11 @@ public class Main extends Password{
 		ArrayList<Password> contrasenias = new ArrayList<Password>();
 		Scanner scan = new Scanner(System.in);
 		
-		System.out.println("cantidad de contraseñas a guardar");
-		int CArrayList = scan.nextInt();
 		
-		for(int i = 0; i< CArrayList; i++) {
+		
+		for(int i = 0; i< 1; i++) {
 			
-			System.out.println("Contrasenia " + (i+1) + " de " + CArrayList);
+			System.out.println("Contrasenia " + (i+1) + " de " + 5);
 			
 			Password contrasenia1 = new Password();
 			String Contrasenia = contrasenia1.generarPassword();
@@ -26,7 +25,7 @@ public class Main extends Password{
 			contrasenias.add(contrasenia1);
 		}
 		
-		for(int i= 0; i<=CArrayList; i++) {
+		for(int i= 0; i<=contrasenias.size(); i++) {
 			System.out.println("Contraseña " + (i+1));
 			System.out.println("Contraseña Guardada " + contrasenias.get(i).getContraseña());
 			System.out.println("Longitud de la contraseña " + contrasenias.get(i).getLongitud());
