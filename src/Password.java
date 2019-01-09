@@ -26,9 +26,9 @@ public class Password {
 	
 	
 	//CONSTRUCTOR
-	 public Password (int longitud){
-	        this.longitud=longitud;
-	        contraseña=generarPassword();
+	 public Password (){
+	        
+	        
 	    }
  
 	
@@ -61,7 +61,7 @@ public class Password {
 	 
 	// COMPROBAR LA LONGITUD DE LA CONTRASEÑA
 	 public  int longitudPassword(String Password){
-		 int longitud = this.getLongitud();
+		 int longitud = Password.length();
 		 
 		 return longitud;
 	 }
@@ -79,19 +79,24 @@ public class Password {
 		 System.out.println("Introduce una contraseña");
 		 contrasenia = scan.nextLine();
 		 
-		if(contrasenia.length() < 11){
+		if(contrasenia.length() > 11){
+			aceptable = true;
+			
+			for(int i = 0; i< contrasenia.length(); i++) {
+				if (Character.isLetter(contrasenia.charAt(i))) {
+					aceptable = true;
+				}else if(Character.isDigit(contrasenia.charAt(i))){
+					aceptable = true;
+				}else {
+					aceptable = false;
+				}
+			}
+		}else {
 			aceptable = false;
 		}
 		
-		for(int i = 0; i< contrasenia.length(); i++) {
-			if (Character.isLetter(contrasenia.charAt(i))) {
-				aceptable = false;
-			}else {
-				aceptable = true;
-			}
-		}
 		 
-	 }while(aceptable = false );
+	 }while(aceptable != true );
 	 
 	 return contrasenia;
 	 }
