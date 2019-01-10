@@ -101,8 +101,13 @@ public class Password {
 	 return contrasenia;
 	 }
 		 
-	 
-	 
+	 @Override
+	 public String toString() {
+		 return "Longitud de la contraseña:" + this.longitud
+				 + "\n Contraseña fuerte: " + esFuerte() 
+				 + "\n Contrseña: " + this.contraseña;
+				
+	 }
 	 
 	 
 	 

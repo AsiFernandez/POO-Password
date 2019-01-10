@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class Main extends Password{
@@ -9,7 +10,7 @@ public class Main extends Password{
 		ArrayList<Password> contrasenias = new ArrayList<Password>();
 		Scanner scan = new Scanner(System.in);
 		
-		for(int i = 0; i< 5; i++) {
+		for(int i = 0; i< 1; i++) {
 			
 			System.out.println("Contrasenia " + (i+1) + " de " + 5);
 			
@@ -21,18 +22,12 @@ public class Main extends Password{
 			contrasenia1.setLongitud(Longitud);
 			
 			contrasenias.add(contrasenia1);
-		}
+		} 
 		
-		for(int i= 0; i<=contrasenias.size(); i++) {
-			System.out.println("Contraseña " + (i+1));
-			System.out.println("Contraseña Guardada " + contrasenias.get(i).getContraseña());
-			System.out.println("Longitud de la contraseña " + contrasenias.get(i).getLongitud());
-			System.out.println("Es fuerte la contraseña " + contrasenias.get(i).esFuerte());
-		 
-		}	 
-		
-		
-	
+		Iterator<Password> i = contrasenias.iterator();
+        while (i.hasNext()) {
+            System.out.println(i.next());
+        }
 		
 		
 	}
