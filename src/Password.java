@@ -104,9 +104,9 @@ public class Password {
 	 @Override
 	 public String toString() {
 		 return "Longitud de la contraseña:" + this.longitud
-				 + "\n Contraseña fuerte: " + esFuerte() 
-				 + "\n Contrseña: " + this.contraseña;
-				
+				 + "\nContraseña fuerte: " + esFuerte() 
+				 + "\nContrseña: " + this.contraseña
+				 + " \n";
 	 }
 	 
 	 

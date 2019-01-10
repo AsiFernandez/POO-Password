@@ -10,7 +10,7 @@ public class Main extends Password{
 		ArrayList<Password> contrasenias = new ArrayList<Password>();
 		Scanner scan = new Scanner(System.in);
 		
-		for(int i = 0; i< 1; i++) {
+		for(int i = 0; i< 5; i++) {
 			
 			System.out.println("Contrasenia " + (i+1) + " de " + 5);
 			
@@ -28,8 +28,7 @@ public class Main extends Password{
         while (i.hasNext()) {
             System.out.println(i.next());
         }
-		
-		
+				
 	}
 
 }
