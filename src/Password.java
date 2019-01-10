@@ -54,7 +54,6 @@ public class Password {
 		}else {
 			fuerte = true;
 		}
-		 
 		 return fuerte;
 	}
 	 
