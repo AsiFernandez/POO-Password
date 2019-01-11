@@ -34,27 +34,29 @@ public class Password {
 	
 	//COMPROBAR SI LA CONTRASEÑA ES FUERTE O NO
 	 public boolean esFuerte(){
-		boolean fuerte = true;
+		
 		int minusculas = 0;
 		int mayusculas = 0; 
 		int numeros = 0;
 		
-		for(int i= 0; i <= contraseña.length(); i++) {
-			if(Character.isUpperCase(i)) {
-				mayusculas = mayusculas +1;
-			}else if (Character.isLowerCase(i)) {
-				minusculas = minusculas +1;
-			}else {
-				numeros ++;
-			}
-		} 
 		
-		if ( mayusculas > 2 && minusculas > 1 && numeros >5 ) {
-			fuerte = false;
-		}else {
-			fuerte = true;
-		}
-		 return fuerte;
+		 for (int i=0;i<contraseña.length();i++){
+             if (contraseña.charAt(i)>=97 && contraseña.charAt(i)<=122){
+                 minusculas+=1;
+             }else{
+                 if (contraseña.charAt(i)>=65 && contraseña.charAt(i)<=90){
+                     mayusculas+=1;
+             }else{
+                 numeros+=1;
+                 }
+             }
+         }
+         //Si la constraseña tiene mas de 5 numeros, mas de 1 minuscula y mas de 2 mayusculas
+         if (numeros>=5 && minusculas>=1 && mayusculas>=2){
+         return true;
+     }else{
+         return false;
+     }
 	}
 	 
 	 
